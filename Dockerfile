@@ -6,8 +6,11 @@ LABEL description="GoCD agent with helm and kubectl" \
 
 USER root
 
+#Install tools
+RUN apk add --update --no-cache jq
+
 #Install helm
-ARG HELM_VERSION=v2.13.1
+ARG HELM_VERSION=v2.14.3
 RUN curl -o /tmp/helm.tar.gz https://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz && \
     tar -C /tmp -zxvf /tmp/helm.tar.gz && \
     mv /tmp/linux-amd64/helm /usr/local/bin/helm && \
