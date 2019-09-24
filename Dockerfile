@@ -7,7 +7,7 @@ LABEL description="GoCD agent with helm and kubectl" \
 USER root
 
 #Install tools
-RUN apk add --update --no-cache jq
+RUN apk add --update --no-cache jq gnupg
 
 #Install helm
 ARG HELM_VERSION=v2.14.3
