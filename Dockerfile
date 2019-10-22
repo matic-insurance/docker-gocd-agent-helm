@@ -1,4 +1,4 @@
-ARG GOCD_VERSION=v19.8.0
+ARG GOCD_VERSION=v19.9.0
 FROM gocd/gocd-agent-alpine-3.9:${GOCD_VERSION}
 
 LABEL description="GoCD agent with helm and kubectl" \
